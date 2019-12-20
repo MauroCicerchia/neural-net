@@ -14,7 +14,9 @@ export default class Neuron {
     }
 
     sum(input) {
-        return _(input).zipWith(this.weights, (a, b) => a * b).sum();
+        return _(input)
+            .zipWith(this.weights, (a, b) => a * b)
+            .sum();
     }
 
     random() {
