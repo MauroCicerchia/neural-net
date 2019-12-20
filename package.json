@@ -1,0 +1,18 @@
+{
+  "name": "neural-net",
+  "version": "1.0.0",
+  "description": "Simple neural net using nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r esm index.js"
+  },
+  "author": "Mauro Cicerchia",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25"
+  }
+}
