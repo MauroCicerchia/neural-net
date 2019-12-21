@@ -1,12 +1,15 @@
 import _ from "lodash";
+import { linear } from "../activationFunctions";
 
 export default class Neuron {
-    constructor(dendriteNumber, activationFunction = _.identity) {
+    constructor(dendriteNumber, activationFunction = linear) {
         this.activationFunction = activationFunction;
-        this.weights = _.map(Array(dendriteNumber), () => this.random());
+        this.weights = this.initWeights(dendriteNumber);
         this.bias = this.random();
-        this.synapse = this.synapse.bind(this);
-        this.sum = this.sum.bind(this);
+    }
+
+    initWeights(dendriteNumber) {
+        return _.map(Array(dendriteNumber), () => this.random())
     }
 
     synapse(input) {

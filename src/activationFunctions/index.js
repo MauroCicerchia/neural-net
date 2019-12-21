@@ -4,4 +4,4 @@ import tanh from "./tanh";
 import step from "./step";
 import linear from "./linear";
 
-export default { relu, sigmoid, tanh, step, linear };
+export { relu, sigmoid, tanh, step, linear };
