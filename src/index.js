@@ -3,4 +3,4 @@ import { Layer } from "./layer";
 import { Network } from "./network";
 import { relu, step } from "./activationFunctions";
 
-new Network([2, 2, 5, 5, 3, 1], step).synapse([3, 1]);
+new Network([2, 2, 5, 5, 3, 1], relu[0]).synapse([3, 1]);
