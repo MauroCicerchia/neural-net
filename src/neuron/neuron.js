@@ -13,7 +13,10 @@ export default class Neuron {
     }
 
     forward(input) {
-        return this.activationFunction(this.sum(input) + this.bias);
+        return {
+            z: this.sum(input) + this.bias,
+            a: this.activationFunction(this.sum(input) + this.bias)
+        };
     }
 
     sum(input) {

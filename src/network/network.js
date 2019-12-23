@@ -18,10 +18,11 @@ export default class Network {
     }
 
     forward(input) {
-        return _.reduce(this.layers, (prevLayerRes, layer) => {
-            const results = layer.forward(prevLayerRes)
-            console.log(results);
+        let prevLayerRes = input;
+        return _.map(this.layers, layer => {
+            const results = layer.forward(prevLayerRes);
+            prevLayerRes = _.map(results, ({ a }) => a);
             return results;
-        }, input);
+        })
     }
 }
