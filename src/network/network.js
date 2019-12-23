@@ -3,13 +3,13 @@ import { linear } from "../activationFunctions";
 import { Layer } from "../layer";
 
 export default class Network {
-    constructor(morphology, activationFunction = linear) {
+    constructor(topology, activationFunction = linear) {
         this.activationFunction = activationFunction;
-        this.layers = this.initLayers(morphology);
+        this.layers = this.initLayers(topology);
     }
 
-    initLayers(morphology) {
-        return this.createLayers(morphology);
+    initLayers(topology) {
+        return this.createLayers(topology);
     }
 
     createLayers([input, output, ...tail]) {
