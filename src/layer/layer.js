@@ -12,7 +12,7 @@ export default class Layer {
         return _.map(Array(neuronNumber), () => new Neuron(inputNumber, this.activationFunction));
     }
 
-    synapse(input) {
-        return _.map(this.neurons, neuron => neuron.synapse(input));
+    forward(input) {
+        return _.map(this.neurons, neuron => neuron.forward(input));
     }
 }

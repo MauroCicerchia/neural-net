@@ -17,9 +17,9 @@ export default class Network {
         return [new Layer(input, output, this.activationFunction), ...this.createLayers([output, ...tail])];
     }
 
-    synapse(input) {
+    forward(input) {
         return _.reduce(this.layers, (prevLayerRes, layer) => {
-            const results = layer.synapse(prevLayerRes)
+            const results = layer.forward(prevLayerRes)
             console.log(results);
             return results;
         }, input);

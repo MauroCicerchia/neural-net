@@ -12,7 +12,7 @@ export default class Neuron {
         return _.map(Array(dendriteNumber), () => this.random())
     }
 
-    synapse(input) {
+    forward(input) {
         return this.activationFunction(this.sum(input) + this.bias);
     }
 
